@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro exercício</title>
+    <style>
+        body {
+            background-color: #5D609D;
+            color: aquamarine;
+            font: normal normal 1.5em helvetica;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual seu nome?')
+        var idade = window.prompt('Qual sua idade?')
+        var maioridade = idade >= 18 ? 'maior de idade' : 'menor de idade'
+        var autorização = maioridade == 'maior de idade' ?  'está autorizado' : 'não está autorizado'
+        document.write(`Olá ${nome}, você é ${maioridade}, então ${autorização} a acessar o site.`)
+        
+    </script>
+</body>
+</html>
