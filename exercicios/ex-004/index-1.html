@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            font: normal 2em arial;
+            display: flex;
+            gap: 20px;
+        }
+        div {
+            background-color: aquamarine;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" onclick="click1()" onmouseenter="enter1()" onmouseout="out1()">
+        Interaja...
+    </div>
+
+    <div id="box2">
+        Interaja...
+    </div>
+
+    <script>
+        //box 1
+        function click1() {
+            var a = window.document.getElementById('box1')
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'blue'
+            a.style.color = 'white'
+        }
+        function enter1() {
+            var a = window.document.getElementById('box1')
+            a.innerHTML = 'Entrou!'
+        }
+        function out1() {
+            var a = window.document.getElementById('box1')
+            a.innerHTML = 'Saiu!'
+            a.style.background = 'aquamarine'
+            a.style.color = 'black'
+        }
+        //box 2
+        var b = window.document.getElementById('box2') 
+        b.addEventListener('click', click2)
+        b.addEventListener('mouseenter', enter2)
+        b.addEventListener('mouseout', out2)
+        
+        function click2() {
+            var a = window.document.getElementById('box2')
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'blue'
+            a.style.color = 'white'
+        }
+        function enter2() {
+            var a = window.document.getElementById('box2')
+            a.innerHTML = 'Entrou!'
+        }
+        function out2() {
+            var a = window.document.getElementById('box2')
+            a.innerHTML = 'Saiu!'
+            a.style.background = 'aquamarine'
+            a.style.color = 'black'
+        }
+    </script>
+</body>
+</html>

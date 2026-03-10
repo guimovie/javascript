@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="vel">Informe sua velocidade:</label>
+    <input type="number" name="vel" id="vel">
+    <label for="vel">Km/h</label>
+    <br>
+    <input type="button" value="Confirmar" onclick="conf()">
+    <div id="res"></div>
+
+    <script>
+        function conf() {
+            var vel = window.document.getElementById('vel')
+            var res = window.document.getElementById('res')
+            var nvel = Number(vel.value)
+            res.innerHTML = `<p>Sua velocidade é igual a <strong>${nvel}Km/h</strong></p>`
+            if (nvel > 60) {
+                res.innerHTML += `<p>Você ultrapassou o limite de velocidade. MULTADO!</p>`
+            }
+            if (nvel < 30) {
+                res.innerHTML += `<p>Você está abaixo da velocidade. MULTADO!</p>`
+            }
+            res.innerHTML += `<p>Use cinto de segurança</p>`
+            
+        }
+    </script>
+</body>
+</html>

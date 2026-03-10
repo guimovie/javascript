@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 1.4em arial;
+            background-color: violet;
+            display: flex;
+            justify-content: center;
+        }
+        
+        main {
+            padding: 20px;
+            height: 90vh;
+            border-radius: 10px;
+            background-color: purple;
+            color: white;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        
+        h1 {
+            font-size: 1.4em;
+        }
+        
+        input {
+            height: 20px;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid rgb(92, 0, 92);
+        }
+
+        input#somar {
+            margin-top: 10px;
+            height: 30px;
+            background-color: black;
+        }
+
+        input#somar:hover {
+            background-color: rgb(230, 76, 230);
+            color: black;
+        }
+
+        input#somar:active {
+            background-color: rgb(98, 30, 161);
+            color: white;
+        }
+        
+        div {
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 70%;
+            padding: 5px;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculo com Script</h1>
+        <input type="number" name="num1" id="num1">
+        +
+        <input type="number" name="num2" id="num2">
+        <br>
+        <input type="button" value="Somar" id="somar" onclick="somar()">
+        <div id="res">Resultado</div>
+    </main>
+
+    <script>
+        function somar() {
+        var num1 = window.document.getElementById('num1')
+        var num2 = window.document.getElementById('num2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+        var soma = n1 + n2
+        res.innerHTML = `Seu resultado é ${soma}`
+
+        }
+
+    </script>
+</body>
+</html>

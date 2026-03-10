@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringonator 2000</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center center;
+            place-content: center center;
+            text-align: center;
+        }
+        input, select {
+            margin-top: 10px;
+            width: 60%;
+            height: 40px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual é sua nacionalidade?</h1>
+    <select name="select" id="select">
+        <option value="sel">--SELECIONE SEU PAÍS--</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Italia">Italia</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Japão">Japão</option>
+        <option value="Canadá">Canadá</option>
+        <option value="Irlanda">Irlanda</option>
+        <option value="Alemanha">Alemanha</option>
+        <option value="Reino Unido">Reino Unido</option>
+    </select>
+    <input type="button" value="Confirmar" onclick="conf()">
+    <div id="out"></div>
+
+    <script>
+        function conf() {
+            var select = window.document.getElementById('select')
+            var option = window.document.getElementsByTagName('option')
+            var out = window.document.getElementById('out')
+            out.innerHTML = `<p>Seu país de origem é ${select.value}</p>`
+            if (select.value.toLowerCase() == 'brasil') {
+                out.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+                select.style.background = 'white'
+                select.style.color = 'black'
+            } else if (select.value == 'sel') {
+                select.style.background = 'red'
+                select.style.color = 'white'
+                out.innerHTML = '<p></p>'
+            } else {
+                out.innerHTML += `<p>Você é <strong>GRINGUITO!</strong></p>`
+                select.style.background = 'white'
+                select.style.color = 'black'
+            }
+        } 
+    </script>
+</body>
+</html>
