@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            color: white;
+            font: normal 1.3em arial;
+            text-align: center;
+        }
+        main {
+            background-color: whitesmoke;
+            color: black;
+            width: 500px;
+            margin: auto;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+        img {
+            width: 60%;
+            margin: 40px;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Que horas são?</h1>
+    </header>
+    <main>
+        <div id="texto"></div>
+        <div id="img">
+            <img src="imagens/morning.jpg" alt="dia" id="dia">
+            <img src="imagens/afternoon.jpg" alt="tarde" id="tarde">
+            <img src="imagens/night.jpg" alt="noite" id="noite">
+        </div>
+    </main>
+
+    <script>
+        //var agora = new Date()
+        //var hora = agora.getHours
+        var hora = 10
+        var texto = window.document.getElementById('texto') 
+        texto.innerHTML = `Agora são exatamente ${hora}h`
+    </script>
+</body>
+</html>
