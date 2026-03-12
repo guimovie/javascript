@@ -27,25 +27,17 @@
         }
     </style>
 </head>
-<body>
+<body onload="carregar()">
     <header>
         <h1>Que horas são?</h1>
     </header>
     <main>
-        <div id="texto"></div>
+        <div id="texto">Aqui vai aparecer a hora</div>
         <div id="img">
-            <img src="imagens/morning.jpg" alt="dia" id="dia">
-            <img src="imagens/afternoon.jpg" alt="tarde" id="tarde">
-            <img src="imagens/night.jpg" alt="noite" id="noite">
+            <img id="imagem" src="imagens/morning.jpg" alt="Foto dia">
         </div>
     </main>
 
-    <script>
-        //var agora = new Date()
-        //var hora = agora.getHours
-        var hora = 10
-        var texto = window.document.getElementById('texto') 
-        texto.innerHTML = `Agora são exatamente ${hora}h`
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+body {
+    background-color: dodgerblue;
+    font: normal 1.2em helvetica;
+}
+
+header {
+    text-align: center;
+
+}
+
+main {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+label {
+    cursor: pointer;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input#ano:hover {
+    cursor: auto;
+}
+
+input#btn {
+    padding: 5px;
+    width: 100px;
+}
+
+div {
+    display: grid;
+    place-items: center center;
+}
