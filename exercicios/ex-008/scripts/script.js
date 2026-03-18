@@ -3,7 +3,7 @@ function verificar()  {
     var anoAgora = agora.getFullYear()
     var ano = window.document.getElementById('txtano')
     var res = window.document.getElementById('res')
-    if (Number(ano.value) > anoAgora) {
+    if (Number(ano.value) < 1900 || Number(ano.value) > anoAgora) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
         var radsex = window.document.getElementsByName('radsex')
