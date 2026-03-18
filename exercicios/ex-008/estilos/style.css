@@ -1,8 +1,9 @@
 @charset 'UTF-8';
 
 body {
-    background-color: dodgerblue;
+    background-color: rgb(173, 4, 196);
     font: normal 1.2em helvetica;
+    height: 90vh;
 }
 
 header {
