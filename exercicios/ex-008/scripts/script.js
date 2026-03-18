@@ -1,46 +1,42 @@
-function verificar(){
-    var ano = window.document.getElementById('ano')
+function verificar()  {
     var agora = new Date()
     var anoAgora = agora.getFullYear()
-    var idade = anoAgora - Number(ano.value) 
-    var result = window.document.getElementById('result')
-    var imagem = window.document.getElementById('img')
+    var ano = window.document.getElementById('txtano')
+    var res = window.document.getElementById('res')
     if (Number(ano.value) > anoAgora) {
-        window.alert('Ano invalido')
+        window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
-        var sexo = window.document.getElementsByName('sexo')
+        var radsex = window.document.getElementsByName('radsex')
+        var idade = anoAgora - Number(ano.value)
+        var genero = ''
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
-        var genero = ''
-
-        if (sexo[0].checked) {
+        if (radsex[0].checked) {
             genero = 'um Homem'
-            if (idade <= 15) {
+            if (idade >= 0 && idade < 15) {
                 //criança
-                img.setAttribute('src', '../imagens/childrenboy.jpg')
-            } else if (idade <= 50) {
-                //jovem ou adulto
-                img.setAttribute('src', '../imagens/adultboy.jpg')
+                img.setAttribute('src', 'criancam.jpg')
+            } else if (idade < 50) {
+                //jovem/adulto
+                img.setAttribute('src', 'jovemm.jpg')
             } else {
                 //idoso
-                img.setAttribute('src', '../imagens/oldman.jpg')
+                img.setAttribute('src', 'oldm.jpg')
             }
-        } else if(sexo[1].checked) {
+        } else if (radsex[1].checked) {
             genero = 'uma Mulher'
-            if (idade <= 15) {
+            if (idade >= 0 && idade < 15) {
                 //criança
-                img.setAttribute('src', '../imagens/childrengirl.jpg')
-            } else if (idade <= 50) {
-                //jovem ou adulto
-                img.setAttribute('src', '../imagens/adultgirl.jpg')
+                img.setAttribute('src', 'criancaf.jpg')
+            } else if (idade < 50) {
+                //jovem/adulto
+                img.setAttribute('src', 'jovemf.jpg')
             } else {
                 //idoso
-                img.setAttribute('src', '../imagens/oldwoman.jpg')
+                img.setAttribute('src', 'oldf.jpg')
             }
         }
-
-        result.innerHTML = `Detectamos ${genero} de ${idade} anos.`
-        imagem.appendChild(img)
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos`
+        res.appendChild(img)
     }
-
 }

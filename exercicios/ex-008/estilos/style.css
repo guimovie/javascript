@@ -7,7 +7,7 @@ body {
 
 header {
     text-align: center;
-
+    color: white;
 }
 
 main {
@@ -26,7 +26,7 @@ input:hover {
     cursor: pointer;
 }
 
-input#ano:hover {
+input#txtano:hover {
     cursor: auto;
 }
 
@@ -37,5 +37,13 @@ input#btn {
 
 div {
     display: grid;
-    place-items: center center;
+}
+
+img {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    place-self: center center;
 }
