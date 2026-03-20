@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+body {
+    background-image: linear-gradient(to bottom, lightblue, violet);
+    height: 97vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font: normal 1.11em arial;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#btn {
+    width: 100px;
+    padding: 5px;
+}
+
+#res {
+    margin-top: 20px;
+}
