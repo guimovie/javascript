@@ -17,7 +17,6 @@ h1 {
 main {
     background-color: white;
     width: 80%;
-    height: 70%;
     padding: 20px;
     border-radius: 10px;
 }
@@ -26,21 +25,25 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 5px;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
 }
 
 #numero {
-    flex: 1;
+    padding: 5px;
+    flex: 1 1 200px;
 }
 
 #btn {
-    padding: 3px;
+    padding: 5px;
     flex: 1 0 100px;
 }
 
 #res {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 p {
