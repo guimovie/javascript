@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+body {
+    background-color: rgb(241, 113, 134);
+    font: normal 1em arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#num {
+    display: flex;
+    gap: 5px;
+}
+
+#numero {
+    flex: 1;
+}
+
+#lista {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+#lista p {
+    line-height: 4px;
+}
