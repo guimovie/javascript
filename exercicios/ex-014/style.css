@@ -3,6 +3,8 @@
 body {
     background-color: rgb(241, 113, 134);
     font: normal 1em arial;
+    display: grid;
+    place-items: center;
 }
 
 header {
@@ -12,6 +14,7 @@ header {
 
 main {
     background-color: white;
+    width: 90vw;
     padding: 10px;
     border-radius: 10px;
 }
@@ -33,4 +36,15 @@ main {
 
 #lista p {
     line-height: 4px;
+    color: red;
+}
+
+#res {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+     main {
+        width: 700px;
+     }
 }
