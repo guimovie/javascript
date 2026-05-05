@@ -31,3 +31,19 @@ function palindromo(palavra) {
 }
 
 console.log(palindromo('Arara'))
+
+function numeroMaior(n1, n2, n3) {
+    if (n1 > n2 && n1 > n3) {
+        return n1
+    } else if (n2 > n1 && n2 > n3) {
+        return n2
+    } else if (n3 > n1 && n3 > n2) {
+        return n3
+    }
+}
+
+console.log(numeroMaior(40, 10, 80))
+
+const calculaPotencia = (n1, n2) => n1 ** n2
+
+console.log(calculaPotencia(5, 2))
